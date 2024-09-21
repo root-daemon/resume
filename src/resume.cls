@@ -39,7 +39,6 @@
 
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}%
 \newcommand{\profilelink}[1]{\href{https://#1}{#1}}%
-\newcommand{\phonelink}[1]{\href{tel:#1}{#1}}%
 
 \newcommand{\isA}[1]{
     \expandafter\ifstrequal\expandafter{#1}{default}{}{a}
@@ -78,7 +77,7 @@
         {%
             \expandafter\ifstrequal\expandafter{phone}{}{}% Contact number
             {%
-                \ifcommandkey{phone}{\phonelink{\commandkey{phone}}}{}
+                \ifcommandkey{phone}{\commandkey{phone}}{}%
                 \expandafter\ifstrequal\expandafter{email}{}%
                 {%
                     \expandafter\ifstrequal\expandafter{linkedin}{}%
@@ -150,9 +149,9 @@
     } \hfill \ifcommandkey{grade}{% Grade field is optional (Can be left empty)
         \commandkey{grade}%
     }{} \\ % line end
-    {% line 3
-        \commandkey{college}
-    } \\ % line end
+   % {% line 3
+    %    \commandkey{college}
+    %} \\ % line end
     {% line 4
         Relevant coursework: \commandkey{coursework}%
     }% line end
