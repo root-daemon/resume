@@ -153,7 +153,7 @@
     %    \commandkey{college}
     %} \\ % line end
     {% line 4
-        Relevant coursework: \commandkey{coursework}%
+        Degree: \commandkey{coursework}%
     }% line end
 }%
 
